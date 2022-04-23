@@ -1,4 +1,5 @@
 ## To Do List
+<img scr="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green" width="50">
 
 Desafio proposto no curso de Introdução a JavaScript durante o Bootcamp Spread Fullstack Developer proporcionado pela Digital Innovation One em parceria com Spread. O objetivo do desafio é criar uma lista de tarefas com as seguintes funcionalidades:
  1. Crie um campo de input de texto e um botão para adicionar a tarefa à lista;
