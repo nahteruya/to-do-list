@@ -3,21 +3,22 @@ addBtn.addEventListener('click', addTask);
 var taskList = [];
 
 function addTask() {
-  var inputElement = document.getElementById('inputText');
-  var inputValue = inputElement.value;
-  taskList.push(inputValue);
+  var inputText = document.getElementById('inputText').value;
+  taskList.push(inputText);
   document.getElementById('inputText').value = '';
 
-  var element = '';
-  for (var i = 0; i < taskList.length; i++)
-  {
-    element += '<li><input type="checkbox" class="transitionCheckbox"><p>';
-    element += taskList[i];
-    element += '</p></li>';
+  for(var i = 0; i < taskList.length; i++) {
+    var inputCheckbox = document.createElement('input');
+    inputCheckbox.type = 'checkbox';
+    inputCheckbox.classList = 'transitionCheckbox';
+    var paragraph = document.createElement('p');
+    paragraph.append(taskList[i]);
+
+    var liElement = document.createElement('li');
+    liElement.appendChild(inputCheckbox);
+    liElement.appendChild(paragraph);
   }
-  
   var ulElement = document.getElementById('tasksList');
-  ulElement.innerHTML = element;
+  ulElement.appendChild(liElement);
+  console.log(ulElement);
 }
-
-
