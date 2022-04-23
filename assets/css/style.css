@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&display=swap');
+
+body {
+  font-family: 'Akshar', sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1508739773434-c26b3d09e071?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-repeat:no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px 20px;
+  width: 100%;
+  height: 700px;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+.input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.input input {
+  width: 50%;
+  height: 30px;
+  background-color: #f1f1f1;
+  opacity: 0.5;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: 'Akshar', sans-serif;
+}
+#addTaskBtn {
+  width: 90px;
+  height: 36px;
+  font-family: 'Akshar', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+}
+#tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+#tasksList li {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+.transitionCheckbox {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  transition: transform 0.5s;
+}
+#tasksList li p {
+  font-size: 16px;
+}
+.transitionCheckbox:checked ~ p{
+  text-decoration:line-through;
+}
+.transitionCheckbox:checked {
+  transform: rotateX(360deg);
+}
