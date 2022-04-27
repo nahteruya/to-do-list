@@ -1,24 +1,49 @@
-var addBtn = document.getElementById('addTaskBtn');
-addBtn.addEventListener('click', addTask);
-var taskList = [];
+let btnAddTaskElem = document.getElementById('btnAddTask');
+btnAddTaskElem.addEventListener('click', addTask);
+let tasksList = [];
 
 function addTask() {
-  var inputText = document.getElementById('inputText').value;
-  taskList.push(inputText);
+  let inputTextValue = document.getElementById('inputText').value;
+  tasksList.push(inputTextValue);
   document.getElementById('inputText').value = '';
 
-  for(var i = 0; i < taskList.length; i++) {
-    var inputCheckbox = document.createElement('input');
-    inputCheckbox.type = 'checkbox';
-    inputCheckbox.classList = 'transitionCheckbox';
-    var paragraph = document.createElement('p');
-    paragraph.append(taskList[i]);
-
-    var liElement = document.createElement('li');
-    liElement.appendChild(inputCheckbox);
-    liElement.appendChild(paragraph);
-  }
-  var ulElement = document.getElementById('tasksList');
-  ulElement.appendChild(liElement);
-  console.log(ulElement);
+  displayTasks(tasksList);
 }
+
+function deleteTask(i) {
+  console.log('deleted task' + i);
+  tasksList.splice(i,1);
+
+  displayTasks(tasksList);
+}
+
+function displayTasks(tasksList) {
+  let ulElem = document.getElementById('ulTasksList');
+  ulElem.innerHTML = '';
+
+  for(let i = 0; i < tasksList.length; i++) {
+    let checkboxElem = document.createElement('input');
+    checkboxElem.type = 'checkbox';
+    checkboxElem.classList = 'checkboxTasksList';
+    
+    let paragElem = document.createElement('p');
+    paragElem.classList = 'paragTasksList';
+    paragElem.append(tasksList[i]);
+    
+    let imgElem = document.createElement('img');
+    imgElem.src = 'https://cdn-icons-png.flaticon.com/512/73/73806.png';
+    imgElem.classList = 'imgTasksList';
+    imgElem.onclick = function() {deleteTask(i)};
+    
+    let liElem = document.createElement('li');
+    liElem.classList = 'liTasksList';    
+    liElem.appendChild(checkboxElem);
+    liElem.appendChild(paragElem);
+    liElem.appendChild(imgElem);
+    
+    ulElem.appendChild(liElem);
+  }    
+}
+
+
+

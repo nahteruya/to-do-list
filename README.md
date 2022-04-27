@@ -1,5 +1,5 @@
 ## To Do List
-<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green" width="50">
+<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-green" width="200">
 
 Desafio proposto no curso de Introdução a JavaScript durante o Bootcamp Spread Fullstack Developer proporcionado pela Digital Innovation One em parceria com Spread. O objetivo do desafio é criar uma lista de tarefas com as seguintes funcionalidades:
  1. Crie um campo de input de texto e um botão para adicionar a tarefa à lista;
@@ -10,4 +10,3 @@ Desafio proposto no curso de Introdução a JavaScript durante o Bootcamp Spread
 
 ## Ideias para próximas versões:
  - Fazer uma lista das tarefas concluídas (quando o usuário marcar a task como feita, ela será alocada para uma lista de tarefas já realizadas);
- - Deletar as tarefas adicionadas (quando o usuário não ver mais a necessidade de realizar determinada tarefa já adicionada, ele poderá excluí-la);
